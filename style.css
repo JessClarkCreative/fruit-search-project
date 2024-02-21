@@ -1,46 +1,64 @@
+/* border-box for all elements, padding and border are included in the element's total width and height */
 * {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
 :focus {
- /* TODO */
+  outline: none;
 }
 
 body {
-  /* TODO */
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #ffbefe, #e643ff);
+  display: flex; /* Use flexbox to center content vertically and horizontally */
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Set the height of the body to be 100% of the viewport height */
 }
 
 input {
- /* TODO */
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
 }
 
+/* Styles for the container holding the search input and suggestions */
 .search-container {
- /* TODO */
+  position: relative; /* Set position to relative for child positioning */
 }
+
 .search-container input,
 .search-container .suggestions {
-  /* TODO */
+  border-radius: 5px;
 }
+
+/* Additional styling for the search input within the container */
 .search-container input {
- /* TODO */
+  margin-bottom: 10px;
 }
-.search-container .suggestions {
-   /* TODO */
+
+.suggestions {
+  position: absolute; /* Set position to absolute for positioning relative to the search container */
+  width: 300px; 
+  background-color: #fad3fb;
+  display: none; /* Initially hide the suggestions dropdown */
+  border-radius: 5px;
+  z-index: 1; /* Set a higher z-index to appear above other elements */
 }
 
 ul {
-  /* TODO */
-}
-ul.has-suggestions {
-  /* TODO */
-}
-ul li {
-  /* TODO */
-}
-ul li:hover {
-  /* TODO */
+  list-style: none; /* Remove default list styles */
+  padding: 0; 
+  margin: 0;
 }
 
-input {
-   /* TODO */
+ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Highlight background color on hover for list items */
+ul li:hover {
+  background-color: #3be0f2;
 }
