@@ -9,8 +9,10 @@ const fruit = ['Apple', 'Apricot', 'Avocado 🥑', 'Banana', 'Bilberry', 'Blackb
 
 // Function to filter fruits based on the input string
 function search(str) {
-	return fruit.filter(fruitName => fruitName.toLowerCase().includes(str.toLowerCase()));
-  }
+	return fruit.filter((fruitName, i) => {
+		return str === fruitName.toLowerCase().substring(0, str.length)
+  })
+}
   
   // Function to display suggestions in the suggestions container
   function showSuggestions(results) {
